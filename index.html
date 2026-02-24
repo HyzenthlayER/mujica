@@ -80,7 +80,7 @@
           <h1 class="title is-1 publication-title">MUJICA: Multi-skill Unified Joint Integration of Control Architecture for Wheeled-Legged Robots</h1>
           <div class="is-size-4 publication-authors">
             <span class="author-block">
-              <!-- <a>Yuqi Li<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a>Yuqi Li<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
               <a>Peng Zhai<sup>*,1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
               <a>Yueqi Zhang<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
               <a>Xiaoyi Wei<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
@@ -88,7 +88,7 @@
               <a>Zhengxu He<sup>2</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
               <a>Qianxiang Yu<sup>2</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
               <a>Lihua Zhang<sup>*,1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <br><br> -->
+              <br><br>
               <center>
                 <div class="image-row">
                   <img src="./resources/fdu_icon.png" width="60%"></img><sup>1</sup>
@@ -255,14 +255,19 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Learning motion control algorithms for vision-based quadruped robots faces significant sim2real challenges. During real-world deployment, visual sensors are prone to various environmental noise interferences, which leads to robots inevitably encountering scenarios untrained in the simulation engine. This directly results in the failure of vision-based estimators. Therefore, to address the deployment issues of vision-based motion control algorithms, in this letter, we propose the Redundant Estimator Network (RENet) framework. This framework, through a dual estimator network design, ensures the robot's robust motion performance while effectively guaranteeing deployment stability when onboard vision fails. The method enables the controller to smoothly switch among various estimation modules through an online estimator adaptation process. We validate the effectiveness of this method on a real robot and hope that this framework can provide a solution for robot deployment and application in complex outdoor environments. 
+            Wheeled-legged robots hold promise for traversing complex terrains and offer superior mobility compared to legged robots. However, wheeled-legged robots must effectively balance both wheeled driving and legged control. Furthermore, due to noisy proprioceptive sensing and real-world motor constraints, realizing robust and adaptive locomotion at peak performance of motors remains challenging. We propose the Multi-skill Unified Joint Integration of Control Architecture (MUJICA), a unified, fully proprioceptive control framework for wheeled-legged robots that integrates diverse low-level skills—including omnidirectional moving, high platform climbing, and fall recovery—within a single policy. All skills, distinguished by unique indicator variables, are trained jointly with accurate DC-motor constraint modeling. Additionally, a high-level skill selector is learned to dynamically choose the optimal skill based solely on proprioceptions, enabling adaptive responses to the surrounding environment. Therefore, MUJICA enhances sim-to-real robustness and enables seamless transitions across diverse locomotion modes, facilitating autonomous adjustment to the environment. We validate our framework in both simulation and real-world experiments on the Unitree Go2-W robot, demonstrating significant improvements in adaptability and task success in unstructured environments.
           </p>
         </div>
-        <div class="is-centered">
+        <!-- <div class="is-centered">
           <center>
           <video autoplay muted loop playsinline controls poster="./resources/loading-icon.gif" style="width: 100%; border: 1px solid #bbb; border-radius: 10px; margin: 2.0%;">
             <source src="./resources/Full/Full-fixed.mp4" type="video/mp4">
           </video>
+          </center>
+      </div> -->
+          <div class="is-centered">
+          <center>
+            <img src="./resources/pipeline.png">
           </center>
       </div>
       </div>
@@ -280,7 +285,7 @@
         <div class="is-centered">
           <center>
           <video autoplay muted loop playsinline controls poster="./resources/loading-icon.gif" style="width: 100%; border: 1px solid #bbb; border-radius: 10px; margin: 2.0%;">
-            <source src="./resources/simulation_result.mp4" type="video/mp4">
+            <source src="./resources/training_in_sim.mp4" type="video/mp4">
           </video>
           </center>
       </div>
@@ -309,26 +314,28 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Locomotion Ability</h2>
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Omnidirectional Moving</h2>
           <td>
             <div class="row">
               <div class="col">
-                  <video autoplay muted loop playsinline controls src="./resources/Locomotion_Ability/outdoor_pit.mp4" width="100%"
-                         style="border-radius:10px; "></video>
+                  <!-- <video autoplay muted loop playsinline controls src="./resources/Locomotion_Ability/outdoor_pit.mp4" width="100%"
+                         style="border-radius:10px; "></video> -->
+                  <video autoplay muted loop playsinline controls src="./resources/omni_moving1.mp4" width="100%"
+                         style="border-radius:10px; "></video>       
               </div>
               <div class="col">
-                <video autoplay muted loop playsinline controls src="./resources/Locomotion_Ability/gap_0.5.mp4" width="100%"
+                <video autoplay muted loop playsinline controls src="./resources/omni_moving2.mp4" width="100%"
                        style="border-radius:10px; "></video>
               </div>
             </div>
 
             <div class="row">
               <div class="col">
-                  <video autoplay muted loop playsinline controls src="./resources/Step/Step0.5.mp4" width="100%"
+                  <video autoplay muted loop playsinline controls src="./resources/omni_moving3.mp4" width="100%"
                          style="border-radius:10px; "></video>
               </div>
               <div class="col">
-                <video autoplay muted loop playsinline controls src="./resources/Gap/gap0.8.mp4" width="100%"
+                <video autoplay muted loop playsinline controls src="./resources/omni_moving4.mp4" width="100%"
                        style="border-radius:10px; "></video>
               </div>
             </div>
